@@ -1,2 +1,2 @@
 # PuzzleGame15
-Cours work team project
+Team cours work project for Software Development Techologies subject
