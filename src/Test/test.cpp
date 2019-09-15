@@ -1,10 +1,20 @@
 #include "pch.h"
 
 TEST(testOfTest, PassedTest) {
-  EXPECT_EQ(1, 1);
-  EXPECT_TRUE(true);
+  ASSERT_EQ(1, 1);
 }
 
 TEST(testOfTest, FailedTest) {
-	EXPECT_EQ(1, 0);
+	ASSERT_EQ(1, 0);
+}
+
+TEST(testOfTest, testout) {
+	byte** field = nullptr;
+}
+
+int main(int argc, char** argv) {
+
+	testing::InitGoogleTest(&argc, argv);
+
+	return RUN_ALL_TESTS();
 }
