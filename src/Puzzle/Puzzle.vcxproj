@@ -22,6 +22,7 @@
     <ClInclude Include="graphicsboard.h" />
     <ClInclude Include="GraphicsLib\graphics.h" />
     <ClInclude Include="play.h" />
+    <ClInclude Include="score.h" />
     <ClInclude Include="shift.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="generation.h" />
@@ -32,6 +33,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="play.cpp" />
     <ClCompile Include="shift.cpp" />
+    <ClCompile Include="score.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>

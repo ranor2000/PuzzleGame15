@@ -4,8 +4,12 @@
 
 #include "play.h"
 
+#include "score.h"
+
 void InitializationGraphics();
 
 void BoardOutput(byte** field);
 
-void VictoryWindow();
+void VictoryWindow(int swipe);
+
+void SalutingWindow();

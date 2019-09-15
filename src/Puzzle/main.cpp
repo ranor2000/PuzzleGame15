@@ -2,17 +2,20 @@
 #include "graphicsboard.h"
 #include "play.h"
 
+
 int main() {
-	
+
 	byte** field = nullptr;
+	scorelist* leaders = new scorelist[6];
 
 	initwindow(600, 500);
-	settextstyle(0, 0, 10);
+
+	SalutingWindow();
 
 	while (true) {
+		cleardevice();
 		ProcessGame(field);
 		if (getch() == 27)break;
-		cleardevice();
 	}
 
 	system("PAUSE");
