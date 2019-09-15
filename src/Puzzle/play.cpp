@@ -1,49 +1,44 @@
 #include "play.h"
 
-void NewBoard(byte** field) {
-	srand(time(NULL));
-
-	for (int i = 0; i < 1000; i++) {
-		int randshift = rand() % 4;
-		MoveDirection shift;
-
-		switch (randshift) {
-			case 0: shift = DownToUp;
-				break;
-			case 1: shift = LeftToRight;
-				break;
-			case 2:	shift = UpToDown;
-				break;
-			case 3: shift = RightToLeft;
-				break;
-		}
-
-		RectangelMove(shift, field);
-	}
-}
-
 void ProcessGame(byte** field) {
-	NewBoard(field);
+
+	field = GenerateNewField(0);
+	OutputBoard(field);
+
 	while (true) {
-		RectangelMove(KeyCheckConslole(), field);
+		MoveDirection direction = KeyCheckConslole();
+		if (direction == None)
+			continue;
+
+		RectangelMove(direction, field);
 		system("CLS");
-		if (VictoryCheck(field) == 1) break;
-		for (int i = 0; i < 4; i++) {
-			for (int j = 0; j < 4; j++)
-				printf("[%2d] ", field[i][j]);
-			printf("\n");
-		}
+		if (VictoryCheck(field)) break;
+
+		OutputBoard(field);
 	}
+
+	DeleteField(field);
 }
 
-int VictoryCheck(byte** field) {
+bool VictoryCheck(byte** field) {
 	int coinc=0;
 	for (int i = 0; i < 4; i++) 
 		for (int j = 0; j < 4; j++)
-			if (field[i][j] = i * 4 + j + 1) coinc++;
+			if (field[i][j] == i * 4 + j + 1) coinc++;
+
 	if (coinc == 14) {
 		system("CLS");
-		printf("Vicory");
-		return 1;
+		printf("Vicory\n");
+		return true;
+	} else
+		return false;
+}
+
+void OutputBoard(byte** field) {
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++)
+			printf("[%2d]", field[i][j]);
+		printf("\n");
 	}
+	printf("\n");
 }

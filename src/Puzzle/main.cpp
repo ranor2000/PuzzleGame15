@@ -1,22 +1,12 @@
 #include "stdafx.h"
 
-#include "generation.h"
-
 #include "play.h"
 
-#include "shift.h"
 int main() {
+	
+	byte** field = nullptr;
 
-	byte** field = GenerateNewField(0);
-
-
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++)
-			printf("[%2d] ", field[i][j]);
-		printf("\n");
-	}
-
-	DeleteField(field);
+	ProcessGame(field);
 
 	system("PAUSE");
 

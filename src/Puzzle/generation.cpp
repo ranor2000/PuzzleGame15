@@ -13,12 +13,28 @@ byte** GenerateNewField(int countOfShuffle) {
 	}
 	field[3][3] = EMPTY;
 
-	return field;
+	srand(time(NULL));
 
 	// shuffle
+	for (int i = 0; i < 1000; i++) {
+		int randshift = rand() % 4;
+		MoveDirection shift = None;
 
-	// TODO... need function of move
+		switch (randshift) {
+		case 0: shift = DownToUp;
+			break;
+		case 1: shift = LeftToRight;
+			break;
+		case 2:	shift = UpToDown;
+			break;
+		case 3: shift = RightToLeft;
+			break;
+		}
 
+		RectangelMove(shift, field);
+	}
+
+	return field;
 }
 
 void DeleteField(byte** field) {
