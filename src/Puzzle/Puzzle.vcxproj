@@ -21,8 +21,10 @@
   <ItemGroup>
     <ClInclude Include="GraphicsLib\graphics.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="generation.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="generation.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
