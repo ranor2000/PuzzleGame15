@@ -1,4 +1,4 @@
-version: 1.1.{build}
+version: '{build}'
 
 image: Visual Studio 2019
 
@@ -15,3 +15,6 @@ build:
   project: src/Puzzle.sln
 
   verbosity: minimal
+
+test_script:
+- cmd: C:\projects\puzzlegame15\src\Debug\Test.exe
