@@ -29,3 +29,8 @@ void BoardOutput(byte** field) {
 			outtextxy(xx, yy, fieldonchar);
 		}
 }			
+
+void VictoryWindow() {
+	cleardevice();
+	outtextxy(110, getmaxy() / 2 - 90, (char*)"Victory");
+}

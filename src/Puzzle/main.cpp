@@ -9,7 +9,11 @@ int main() {
 	initwindow(600, 500);
 	settextstyle(0, 0, 10);
 
-	ProcessGame(field);
+	while (true) {
+		ProcessGame(field);
+		if (getch() == 27)break;
+		cleardevice();
+	}
 
 	system("PAUSE");
 
