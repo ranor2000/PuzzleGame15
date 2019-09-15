@@ -17,4 +17,4 @@ build:
   verbosity: minimal
 
 test_script:
-  - '%APPVEYOR_BUILD_FOLDER%\%CONFIGURATION%\Test.exe'
+- cmd: C:\projects\puzzlegame15\src\Debug\Test.exe
