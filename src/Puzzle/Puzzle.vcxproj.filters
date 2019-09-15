@@ -19,9 +19,10 @@
     </ClInclude>
     <ClInclude Include="GraphicsLib\graphics.h">
       <Filter>GraphicsLib</Filter>
-    </ClInclude>
-    <ClInclude Include="generation.h">
-      <Filter>Файлы заголовков</Filter>
+	</ClInclude>
+		<ClInclude Include="generation.h">
+		<ClInclude Include="shift.h">
+	<Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -31,10 +32,10 @@
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="generation.cpp">
+  <ClCompile Include="shift.cpp">
+  <ClCompile Include="generation.cpp">
       <Filter>Исходные файлы</Filter>
-    </ClCompile>
-  </ItemGroup>
+    </ClCompile>/ItemGroup>
   <ItemGroup>
     <Library Include="GraphicsLib\libbgi.a">
       <Filter>GraphicsLib</Filter>
