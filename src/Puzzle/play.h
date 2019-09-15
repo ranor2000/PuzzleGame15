@@ -1,10 +1,14 @@
 #pragma once
 
 #include "stdafx.h"
+
+#include "graphicsboard.h"
+
 #include "shift.h"
+
 #include "generation.h"
 
-void NewBoard(byte** field);
+
 
 void ProcessGame(byte** field);
 

@@ -16,6 +16,9 @@
     <ClCompile Include="play.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="graphicsboard.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="generation.h">
@@ -31,6 +34,9 @@
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="play.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="graphicsboard.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>

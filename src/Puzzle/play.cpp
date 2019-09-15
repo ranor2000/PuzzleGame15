@@ -3,7 +3,7 @@
 void ProcessGame(byte** field) {
 
 	field = GenerateNewField(0);
-	OutputBoard(field);
+	BoardOutput(field);
 
 	while (true) {
 		MoveDirection direction = KeyCheckConslole();
@@ -14,7 +14,7 @@ void ProcessGame(byte** field) {
 		system("CLS");
 		if (VictoryCheck(field)) break;
 
-		OutputBoard(field);
+		BoardOutput(field);
 	}
 
 	DeleteField(field);
