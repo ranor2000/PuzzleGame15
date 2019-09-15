@@ -9,4 +9,8 @@
 /// + 09 + 10 + 11 + 12 +
 /// + 13 + 14 + 15 + (EMPTY) = 120 + (EMPTY) = 243
 
-byte** GenerateNewField(byte countOfShuffle);
+// allocate and return shufled field;
+byte** GenerateNewField(int countOfShuffle);
+
+// free memory
+void DeleteField(byte** field);

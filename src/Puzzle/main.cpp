@@ -2,7 +2,6 @@
 
 #include "generation.h"
 
-
 int main() {
 
 	byte** field = GenerateNewField(0);
@@ -11,6 +10,8 @@ int main() {
 			printf("[%2d] ", field[i][j]);
 		printf("\n");
 	}
+
+	DeleteField(field);
 
 	system("PAUSE");
 

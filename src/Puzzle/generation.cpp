@@ -1,6 +1,6 @@
 #include "generation.h"
 
-byte** GenerateNewField(byte countOfShuffle) {
+byte** GenerateNewField(int countOfShuffle) {
 
 	// allocation and fill orderly
 	byte** field;
@@ -19,4 +19,12 @@ byte** GenerateNewField(byte countOfShuffle) {
 
 	// TODO... need function of move
 
+}
+
+void DeleteField(byte** field) {
+
+	for (int i = 0; i < 4; i++)
+		delete[] field[i];
+
+	delete[] field;
 }
