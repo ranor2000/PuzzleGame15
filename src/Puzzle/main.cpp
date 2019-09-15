@@ -7,12 +7,15 @@ int main() {
 	byte** field = nullptr;
 
 	initwindow(600, 500);
+	settextstyle(0, 0, 3);
+	SalutingWindow();
+	getch();
 	settextstyle(0, 0, 10);
 
 	while (true) {
+		cleardevice();
 		ProcessGame(field);
 		if (getch() == 27)break;
-		cleardevice();
 	}
 
 	system("PAUSE");
