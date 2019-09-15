@@ -30,8 +30,8 @@ void ProcessGame(byte** field) {
 	NewBoard(field);
 	while (true) {
 		RectangelMove(KeyCheckConslole(), field);
-		system("CLRSCR");
-		if (VictoryCheck(field) == 1)break;
+		system("CLS");
+		if (VictoryCheck(field) == 1) break;
 		for (int i = 0; i < 4; i++) {
 			for (int j = 0; j < 4; j++)
 				printf("[%2d] ", field[i][j]);
@@ -46,7 +46,7 @@ int VictoryCheck(byte** field) {
 		for (int j = 0; j < 4; j++)
 			if (field[i][j] = i * 4 + j + 1) coinc++;
 	if (coinc == 14) {
-		system("CLRSCR");
+		system("CLS");
 		printf("Vicory");
 		return 1;
 	}
