@@ -15,6 +15,3 @@ build:
   project: src/Puzzle.sln
 
   verbosity: minimal
-
-  test_script:
-  - cmd: C:\projects\puzzlegame15\src\Debug\Test.exe
