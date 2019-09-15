@@ -1,6 +1,8 @@
 #pragma once
 
 #include "stdafx.h"
+#include "shift.h"
+#include "generation.h"
 
 void NewBoard(byte** field);
 
