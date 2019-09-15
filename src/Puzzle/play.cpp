@@ -1,28 +1,24 @@
 #include "play.h"
 
 void NewBoard(byte** field) {
-	int randshift;
 	srand(time(NULL));
+
 	for (int i = 0; i < 1000; i++) {
-		randshift = rand() % 4;
+		int randshift = rand() % 4;
+		MoveDirection shift;
+
 		switch (randshift) {
-			case 0: {
-				RectangelMove(DownToUp, field);
+			case 0: shift = DownToUp;
 				break;
-			}
-			case 1: {
-				RectangelMove(LeftToRight, field);
+			case 1: shift = LeftToRight;
 				break;
-			}
-			case 2: {
-				RectangelMove(UpToDown, field);
-					break;
-			}
-			case 3: {
-				RectangelMove(RightToLeft, field);
+			case 2:	shift = UpToDown;
 				break;
-			}
+			case 3: shift = RightToLeft;
+				break;
 		}
+
+		RectangelMove(shift, field);
 	}
 }
 
