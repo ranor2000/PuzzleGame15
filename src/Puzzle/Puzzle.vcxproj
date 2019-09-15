@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="graphicsboard.h" />
     <ClInclude Include="GraphicsLib\graphics.h" />
     <ClInclude Include="play.h" />
     <ClInclude Include="shift.h" />
@@ -27,6 +28,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="generation.cpp" />
+    <ClCompile Include="graphicsboard.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="play.cpp" />
     <ClCompile Include="shift.cpp" />

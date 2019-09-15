@@ -9,22 +9,22 @@ void swap(byte &a, byte &b) {
 
 // check from console
 MoveDirection KeyCheckConslole() {
-	char key = _getch();
+	char key = getch();
 	return KeyCheck(key);
 }
 
 // check 
 MoveDirection KeyCheck(char key) {
-	if (key == 87 || key == 119 || key == 150 || key == 230)
+	if (key == 87 || key == 119 || key == 150 || key == 230 || key == -26 || key == -106 || key == 72)
 		return DownToUp;
 
-	if (key == 68 || key == 100 || key == 130 || key == 162)
+	if (key == 68 || key == 100 || key == 130 || key == 162 || key == -94 || key == -126 || key == 77)
 		return LeftToRight;
 
-	if (key == 83 || key == 115 || key == 155 || key == 235)
+	if (key == 83 || key == 115 || key == 155 || key == 235 || key == -21 || key == -101 || key == 80)
 		return UpToDown;
 
-	if (key == 65 || key == 97 || key == 148 || key == 228)
+	if (key == 65 || key == 97 || key == 148 || key == 228 || key == -28 || key == -108 || key == 75)
 		return RightToLeft;
 
 	return None;

@@ -9,12 +9,11 @@ void ProcessGame(byte** field) {
 		MoveDirection direction = KeyCheckConslole();
 		if (direction == None)
 			continue;
-
+	
 		RectangelMove(direction, field);
-		system("CLS");
 		if (VictoryCheck(field)) break;
 
-		OutputBoard(field);
+		BoardOutput(field);
 	}
 
 	DeleteField(field);
@@ -27,8 +26,7 @@ bool VictoryCheck(byte** field) {
 			if (field[i][j] == i * 4 + j + 1) coinc++;
 
 	if (coinc == 15) {
-		system("CLS");
-		printf("Vicory\n");
+		VictoryWindow();
 		return true;
 	} else
 		return false;
