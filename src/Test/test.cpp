@@ -1,4 +1,5 @@
 #include "../Puzzle/generation.h"
+#include "../Puzzle/play.h" 
 #include "../Puzzle/shift.h"
 #include "pch.h"
 
@@ -23,6 +24,20 @@ TEST(GameMechanics, Generation) {
 		DeleteField(testField);
 		ASSERT_EQ(sum, 120);
 	}
+}
+
+TEST(GameMechanics, Victory) {
+	byte** testField = GenerateNewField();
+	
+	// freshly generated field cant be win 
+	ASSERT_FALSE(VictoryCheck(testField));
+
+	for (int i = 0; i < 4; i++)
+		for (int j = 0; j < 4; j++)
+			testField[i][j] = i * 4 + j + 1;
+	testField[3][3] = EMPTY;
+
+	ASSERT_TRUE(VictoryCheck(testField));
 }
 
 int main(int argc, char** argv) {
