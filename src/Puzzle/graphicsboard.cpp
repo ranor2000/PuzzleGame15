@@ -53,7 +53,6 @@ void VictoryWindow(int swipe) {
 			bar(i * 51 + 40, getmaxy() / 2 + 10, i * 51 + 90, getmaxy() / 2 + 80);
 		}
 		else if (letter == 13) {
-			loadscore(leaders);
 			for (int j = 0; j < 10; j++) {
 				if (leaders[i].scor > swipe) {
 					leaders[i].scor = swipe;

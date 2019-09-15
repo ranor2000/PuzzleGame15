@@ -6,6 +6,7 @@
 int main() {
 
 	byte** field = nullptr;
+	scorelist* leaders = new scorelist[6];
 
 	initwindow(600, 500);
 
@@ -16,7 +17,7 @@ int main() {
 		ProcessGame(field);
 		if (getch() == 27)break;
 	}
-	
+
 	system("PAUSE");
 
 	return 0;
