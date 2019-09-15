@@ -9,7 +9,7 @@ void ProcessGame(byte** field) {
 		MoveDirection direction = KeyCheckConslole();
 		if (direction == None)
 			continue;
-
+	
 		RectangelMove(direction, field);
 		system("CLS");
 		if (VictoryCheck(field)) break;
