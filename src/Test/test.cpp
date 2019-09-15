@@ -1,15 +1,9 @@
+#include "../Puzzle/shift.h"
 #include "pch.h"
 
-TEST(testOfTest, PassedTest) {
-  ASSERT_EQ(1, 1);
-}
-
-TEST(testOfTest, FailedTest) {
-	ASSERT_EQ(1, 0);
-}
-
-TEST(testOfTest, testout) {
-	byte** field = nullptr;
+TEST(GeneralFunctions, Swap) {
+	byte a = 1, b = 2;
+	swap(a, b);
 }
 
 int main(int argc, char** argv) {
