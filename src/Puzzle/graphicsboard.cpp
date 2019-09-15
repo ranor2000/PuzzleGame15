@@ -3,12 +3,13 @@
 void InitializationGraphics() {
 	int GrDr, GrMod, rez;
 	GrDr = DETECT;
-	initgraph(&GrDr, &GrMod, (char*)" ");
+//	initgraph(&GrDr, &GrMod, (char*)" ");
+	initwindow(800, 600);
 	rez = graphresult();
 	if (rez != grOk) {
 		printf("Initialization failed: %s\n", grapherrormsg(rez));
 		printf("Press any key");
-		_getch();
+		getch();
 		exit(1);
 	}
 }
@@ -23,7 +24,7 @@ void BoardOutput(byte** field) {
 			if (field[i][j] < 10)
 				xx = 50 + (j) * (getmaxx() / 4);
 			else
-				xx = 30 + (j) * (getmaxx() / 4);
+				xx = 24 + (j) * (getmaxx() / 4);
 			yy = 20 + (i) * (getmaxy() / 4);
 			outtextxy(xx, yy, fieldonchar);
 		}

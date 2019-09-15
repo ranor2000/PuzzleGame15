@@ -9,7 +9,7 @@ void swap(byte &a, byte &b) {
 
 // check from console
 MoveDirection KeyCheckConslole() {
-	char key = _getch();
+	char key = getch();
 	return KeyCheck(key);
 }
 

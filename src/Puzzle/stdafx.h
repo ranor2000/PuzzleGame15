@@ -9,6 +9,5 @@
 
 #include <time.h>
 
-#include <conio.h>
 
 #include "GraphicsLib/graphics.h"

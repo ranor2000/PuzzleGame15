@@ -6,7 +6,8 @@ int main() {
 	
 	byte** field = nullptr;
 
-	InitializationGraphics;
+	initwindow(600, 500);
+	settextstyle(0, 0, 10);
 
 	ProcessGame(field);
 
