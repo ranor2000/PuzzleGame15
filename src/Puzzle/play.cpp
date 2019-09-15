@@ -2,7 +2,7 @@
 
 void ProcessGame(byte** field) {
 
-	field = GenerateNewField(0);
+	field = GenerateNewField();
 	OutputBoard(field);
 
 	while (true) {
