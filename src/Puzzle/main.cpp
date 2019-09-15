@@ -7,7 +7,6 @@ int main() {
 
 	byte** field = nullptr;
 
-	
 	initwindow(600, 500);
 
 	SalutingWindow();
@@ -17,7 +16,7 @@ int main() {
 		ProcessGame(field);
 		if (getch() == 27)break;
 	}
-
+	
 	system("PAUSE");
 
 	return 0;

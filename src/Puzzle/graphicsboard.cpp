@@ -33,7 +33,7 @@ void BoardOutput(byte** field) {
 
 void VictoryWindow(int swipe) {
 	int letter, i = 0;
-	scorelist* leaders = new scorelist[10];
+	scorelist* leaders = new scorelist[6];
 	cleardevice();
 	char * sc = new char[255];
 	outtextxy(20, getmaxy() / 2 - 160, (char*)"Enter youre");
@@ -62,6 +62,7 @@ void VictoryWindow(int swipe) {
 					break;
 				}
 			}
+			Globalscore(leaders);
 			break;
 		}
 		else if (i < 9 && letter>32 && letter < 127) {
