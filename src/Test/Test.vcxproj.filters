@@ -15,6 +15,9 @@
     <ClCompile Include="..\Puzzle\stdafx.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="..\Puzzle\graphicsboard.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -33,6 +36,9 @@
     <ClInclude Include="..\Puzzle\generation.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="..\Puzzle\graphicsboard.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -44,5 +50,16 @@
     <Filter Include="Исходные файлы">
       <UniqueIdentifier>{4c93c01e-5cae-4aed-a9bb-5eb2694bad76}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Графические библоитеки">
+      <UniqueIdentifier>{53e6269f-b877-4b96-88ab-66fb0f9c2ba5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\Puzzle\GraphicsLib\bgi.lib">
+      <Filter>Графические библоитеки</Filter>
+    </Library>
+    <Library Include="..\Puzzle\GraphicsLib\libbgi.a">
+      <Filter>Графические библоитеки</Filter>
+    </Library>
   </ItemGroup>
 </Project>

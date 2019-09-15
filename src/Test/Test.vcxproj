@@ -34,6 +34,7 @@
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
     <ClInclude Include="..\Puzzle\generation.h" />
+    <ClInclude Include="..\Puzzle\graphicsboard.h" />
     <ClInclude Include="..\Puzzle\GraphicsLib\graphics.h" />
     <ClInclude Include="..\Puzzle\play.h" />
     <ClInclude Include="..\Puzzle\shift.h" />
@@ -42,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Puzzle\generation.cpp" />
+    <ClCompile Include="..\Puzzle\graphicsboard.cpp" />
     <ClCompile Include="..\Puzzle\play.cpp" />
     <ClCompile Include="..\Puzzle\shift.cpp" />
     <ClCompile Include="..\Puzzle\stdafx.cpp" />
@@ -60,6 +62,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\Puzzle\GraphicsLib\bgi.lib" />
+    <Library Include="..\Puzzle\GraphicsLib\libbgi.a" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
