@@ -1,6 +1,6 @@
 #include "generation.h"
 
-byte** GenerateNewField(int countOfShuffle) {
+byte** GenerateNewField() {
 
 	// allocation and fill orderly
 	byte** field;
