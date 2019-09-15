@@ -20,12 +20,18 @@
     <ClInclude Include="GraphicsLib\graphics.h">
       <Filter>GraphicsLib</Filter>
     </ClInclude>
+    <ClInclude Include="shift.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="shift.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
