@@ -2,6 +2,9 @@
 
 #include "generation.h"
 
+#include "start.h"
+
+#include "shift.h"
 int main() {
 
 	byte** field = GenerateNewField(0);
