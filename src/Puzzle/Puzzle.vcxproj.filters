@@ -1,40 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Исходные файлы">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Файлы заголовков">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="GraphicsLib">
-      <UniqueIdentifier>{56499990-d2d1-4097-9511-dca5a69c2024}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="GraphicsLib\graphics.h">
-      <Filter>GraphicsLib</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="stdafx.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="shift.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="generation.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="play.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="GraphicsLib\libbgi.a">
-      <Filter>GraphicsLib</Filter>
-    </Library>
+    <ClInclude Include="generation.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="shift.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsLib\graphics.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="play.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
     <Library Include="GraphicsLib\bgi.lib">
-      <Filter>GraphicsLib</Filter>
+      <Filter>Графические библоитеки</Filter>
     </Library>
+    <Library Include="GraphicsLib\libbgi.a">
+      <Filter>Графические библоитеки</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Заголовочные файлы">
+      <UniqueIdentifier>{07be033c-4d94-48fa-91d6-7cf274ff5fcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Графические библоитеки">
+      <UniqueIdentifier>{83520c50-a15c-4647-96b1-49e5e70ff119}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{d4ec813d-edd3-4c6f-8242-214580b0d12d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
