@@ -2,7 +2,7 @@
 
 #include "generation.h"
 
-#include "start.h"
+#include "play.h"
 
 #include "shift.h"
 int main() {

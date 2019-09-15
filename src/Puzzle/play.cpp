@@ -1,4 +1,4 @@
-#include "start.h"
+#include "play.h"
 
 void NewBoard(byte** field) {
 	int randshift;
@@ -22,6 +22,18 @@ void NewBoard(byte** field) {
 				RectangelMove(RightToLeft, field);
 				break;
 			}
+		}
+	}
+}
+
+void ProcessGame(byte** field) {
+	while (true) {
+		RectangelMove(KeyCheckConslole(), field);
+		system("CLRSCR");
+		for (int i = 0; i < 4; i++) {
+			for (int j = 0; j < 4; j++)
+				printf("[%2d] ", field[i][j]);
+			printf("\n");
 		}
 	}
 }

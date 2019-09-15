@@ -13,6 +13,14 @@ MoveDirection KeyCheckConslole() {
 
 MoveDirection KeyCheck(char key) {
 	// TODO
+	if (key == 87 || key == 119 || key == 150 || key == 230)
+		return DownToUp;
+	if (key == 68 || key == 100 || key == 130 || key == 162)
+		return LeftToRight;
+	if (key == 83 || key == 115 || key == 155 || key == 235)
+		return UpToDown;
+	if (key == 65 || key == 97 || key == 148 || key == 228)
+		return RightToLeft;
 }
 
 void RectangelMove(MoveDirection direction, byte** field) {
