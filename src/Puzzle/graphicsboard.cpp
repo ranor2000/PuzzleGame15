@@ -31,12 +31,50 @@ void BoardOutput(byte** field) {
 		}
 }			
 
-void VictoryWindow() {
+void VictoryWindow(int swipe) {
+	int letter, i = 0;
+	scorelist* leaders = new scorelist[10];
 	cleardevice();
-	outtextxy(110, getmaxy() / 2 - 90, (char*)"Victory");
+	char * sc = new char[255];
+	outtextxy(20, getmaxy() / 2 - 160, (char*)"Enter youre");
+	outtextxy(180, getmaxy() / 2 - 80, (char*)"name:");
+	bar(40, getmaxy() / 2, 90, getmaxy() / 2 + 60);
+	outtextxy(40, getmaxy() / 2 + 80, (char*)"Score:");
+	_itoa(swipe, sc, 10);
+	outtextxy(340, getmaxy() / 2 + 80, sc);
+	char b[255] = { 0 };
+	while (true) {
+		letter = getch();
+		if (letter == 27)break;
+		else if (letter == 8 && i > 0) {
+			b[i] = ' ';
+			outtextxy(40, getmaxy() / 2, b);
+			i--;
+			bar(i * 51 + 40, getmaxy() / 2 + 10, i * 51 + 90, getmaxy() / 2 + 80);
+		}
+		else if (letter == 13) {
+			loadscore(leaders);
+			for (int j = 0; j < 10; j++) {
+				if (leaders[i].scor > swipe) {
+					leaders[i].scor = swipe;
+					leaders[i].n = sc;
+					leaders[i].name = b;
+					break;
+				}
+			}
+			break;
+		}
+		else if (i < 9 && letter>32 && letter < 127) {
+			b[i] = (char)letter;
+			outtextxy(40, getmaxy() / 2, b);
+			i++;
+			bar(i * 51 + 40, getmaxy() / 2 + 10, i * 51 + 90, getmaxy() / 2 + 80);
+		}
+	}
 }
 
 void SalutingWindow() {
+	settextstyle(0, 0, 3);
 	outtextxy(20, 40, (char*)"W - Move EMPTY cell UP");
 	outtextxy(20, 80, (char*)"A - Move EMPTY cell LEFT");
 	outtextxy(20, 120, (char*)"S - Move EMPTY cell DOWN");
@@ -45,4 +83,6 @@ void SalutingWindow() {
 	outtextxy(240, 280, (char*)"PRESS");
 	outtextxy(185, 320, (char*)"<ANNY KEY>");
 	outtextxy(170, 360, (char*)"TO CONTINUE");
+	getch();
+	settextstyle(0, 0, 10);
 }
