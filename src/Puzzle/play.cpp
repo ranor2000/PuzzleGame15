@@ -26,7 +26,7 @@ bool VictoryCheck(byte** field) {
 		for (int j = 0; j < 4; j++)
 			if (field[i][j] == i * 4 + j + 1) coinc++;
 
-	if (coinc == 14) {
+	if (coinc == 15) {
 		system("CLS");
 		printf("Vicory\n");
 		return true;
