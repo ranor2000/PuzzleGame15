@@ -2,7 +2,7 @@
 
 void ProcessGame(byte** field) {
 	int swipe=0;
-	field = GenerateNewField(0);
+	field = GenerateNewField();
 	BoardOutput(field);
 
 	while (true) {

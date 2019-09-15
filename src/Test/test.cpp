@@ -35,14 +35,14 @@ TEST(GameMechanics, Victory) {
 	byte** testField = GenerateNewField();
 	
 	// freshly generated field cant be win 
-	ASSERT_FALSE(VictoryCheck(testField));
+	ASSERT_FALSE(VictoryCheck(testField,100));
 
 	for (int i = 0; i < 4; i++)
 		for (int j = 0; j < 4; j++)
 			testField[i][j] = i * 4 + j + 1;
 	testField[3][3] = EMPTY;
 
-	ASSERT_TRUE(VictoryCheck(testField));
+	ASSERT_TRUE(VictoryCheck(testField,100));
 }
 
 int main(int argc, char** argv) {
