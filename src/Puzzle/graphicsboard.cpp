@@ -1,19 +1,5 @@
 #include "graphicsboard.h"
 
-void InitializationGraphics() {
-	int GrDr, GrMod, rez;
-	GrDr = DETECT;
-//	initgraph(&GrDr, &GrMod, (char*)" ");
-	initwindow(800, 600);
-	rez = graphresult();
-	if (rez != grOk) {
-		printf("Initialization failed: %s\n", grapherrormsg(rez));
-		printf("Press any key");
-		getch();
-		exit(1);
-	}
-}
-
 void BoardOutput(byte** field) {
 	int xx, yy;
 	char * fieldonchar = new char[255];

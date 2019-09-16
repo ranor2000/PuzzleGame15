@@ -37,6 +37,7 @@
     <ClInclude Include="..\Puzzle\graphicsboard.h" />
     <ClInclude Include="..\Puzzle\GraphicsLib\graphics.h" />
     <ClInclude Include="..\Puzzle\play.h" />
+    <ClInclude Include="..\Puzzle\score.h" />
     <ClInclude Include="..\Puzzle\shift.h" />
     <ClInclude Include="..\Puzzle\stdafx.h" />
     <ClInclude Include="pch.h" />
@@ -45,6 +46,7 @@
     <ClCompile Include="..\Puzzle\generation.cpp" />
     <ClCompile Include="..\Puzzle\graphicsboard.cpp" />
     <ClCompile Include="..\Puzzle\play.cpp" />
+    <ClCompile Include="..\Puzzle\score.cpp" />
     <ClCompile Include="..\Puzzle\shift.cpp" />
     <ClCompile Include="..\Puzzle\stdafx.cpp" />
     <ClCompile Include="test.cpp" />

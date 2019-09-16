@@ -1,5 +1,6 @@
 #pragma once
 #include "stdafx.h"
+#include "play.h"
 
 void loadscore(struct scorelist* leaders);
 
