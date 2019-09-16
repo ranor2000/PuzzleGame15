@@ -7,3 +7,5 @@
 
 #include "gtest/gtest.h"
 #include "../Puzzle/stdafx.h"
+
+#define TEST_RUN

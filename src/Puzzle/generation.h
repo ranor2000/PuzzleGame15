@@ -6,7 +6,7 @@
 #define EMPTY byte(0)
 
 // allocate and return shufled field;
-byte** GenerateNewField(int countOfShuffle);
+byte** GenerateNewField();
 
 // free memory
 void DeleteField(byte** field);
