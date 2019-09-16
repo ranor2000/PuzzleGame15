@@ -34,6 +34,7 @@ void BoardOutput(byte** field) {
 void VictoryWindow(int swipe) {
 	int letter, i = 0;
 	scorelist* leaders = new scorelist[6];
+	loadscore(leaders);
 	cleardevice();
 	char * sc = new char[255];
 	outtextxy(20, getmaxy() / 2 - 160, (char*)"Enter youre");
@@ -53,11 +54,16 @@ void VictoryWindow(int swipe) {
 			bar(i * 51 + 40, getmaxy() / 2 + 10, i * 51 + 90, getmaxy() / 2 + 80);
 		}
 		else if (letter == 13) {
-			for (int j = 0; j < 10; j++) {
-				if (leaders[i].scor > swipe) {
-					leaders[i].scor = swipe;
-					leaders[i].n = sc;
-					leaders[i].name = b;
+			for (int j = 0; j < 6; j++) {
+				if (leaders[j].scor > swipe) {
+					for (int k = 5; k > j; k--) {
+						leaders[k].scor = leaders[k - 1].scor;
+						strcpy(leaders[k].n, leaders[k-1].n);
+						strcpy(leaders[k].name, leaders[k-1].name);
+					}
+					leaders[j].scor = swipe;
+					strcpy(leaders[j].n, sc);
+					strcpy(leaders[j].name, b);
 					break;
 				}
 			}
@@ -75,6 +81,7 @@ void VictoryWindow(int swipe) {
 
 void SalutingWindow() {
 	settextstyle(0, 0, 3);
+	cleardevice();
 	outtextxy(20, 40, (char*)"W - Move EMPTY cell UP");
 	outtextxy(20, 80, (char*)"A - Move EMPTY cell LEFT");
 	outtextxy(20, 120, (char*)"S - Move EMPTY cell DOWN");
@@ -83,6 +90,5 @@ void SalutingWindow() {
 	outtextxy(240, 280, (char*)"PRESS");
 	outtextxy(185, 320, (char*)"<ANNY KEY>");
 	outtextxy(170, 360, (char*)"TO CONTINUE");
-	getch();
 	settextstyle(0, 0, 10);
 }

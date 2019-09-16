@@ -1,8 +1,18 @@
 #pragma once
 #include "stdafx.h"
 
-void loadscore(struct scorelist* leaders);
+#define WORK_FILE "player.bin"
 
-void savescore(struct scorelist* leaders);
+#define WORDSIZE 10
+
+struct scorelist {
+	int scor = 300;
+	char n[WORDSIZE] = { 0 };
+	char name[WORDSIZE] = { 0 };
+};
+
+void loadscore(scorelist* leaders);
+
+void savescore(scorelist* leaders);
 
 void Globalscore(scorelist* leaders);

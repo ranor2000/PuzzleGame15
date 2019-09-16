@@ -18,6 +18,9 @@
     <ClCompile Include="..\Puzzle\graphicsboard.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="..\Puzzle\score.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -37,6 +40,9 @@
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="..\Puzzle\graphicsboard.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Puzzle\score.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>

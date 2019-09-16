@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{cb3658aa-0357-4cbf-89a9-9f34ce54318d}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -37,6 +37,7 @@
     <ClInclude Include="..\Puzzle\graphicsboard.h" />
     <ClInclude Include="..\Puzzle\GraphicsLib\graphics.h" />
     <ClInclude Include="..\Puzzle\play.h" />
+    <ClInclude Include="..\Puzzle\score.h" />
     <ClInclude Include="..\Puzzle\shift.h" />
     <ClInclude Include="..\Puzzle\stdafx.h" />
     <ClInclude Include="pch.h" />
@@ -45,6 +46,7 @@
     <ClCompile Include="..\Puzzle\generation.cpp" />
     <ClCompile Include="..\Puzzle\graphicsboard.cpp" />
     <ClCompile Include="..\Puzzle\play.cpp" />
+    <ClCompile Include="..\Puzzle\score.cpp" />
     <ClCompile Include="..\Puzzle\shift.cpp" />
     <ClCompile Include="..\Puzzle\stdafx.cpp" />
     <ClCompile Include="test.cpp" />

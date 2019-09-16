@@ -6,18 +6,15 @@
 int main() {
 
 	byte** field = nullptr;
-	scorelist* leaders = new scorelist[6];
-
 	initwindow(600, 500);
-
 	SalutingWindow();
-
+	if (getch() == 27)return 0;
 	while (true) {
 		cleardevice();
 		ProcessGame(field);
-		if (getch() == 27)break;
+		SalutingWindow();
+		if (getch() == 27)return 0;
 	}
-
 	system("PAUSE");
 
 	return 0;

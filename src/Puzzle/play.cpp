@@ -7,6 +7,7 @@ void ProcessGame(byte** field) {
 
 	while (true) {
 		MoveDirection direction = KeyCheckConslole();
+		if (direction == 5) return;
 		if (direction == None)
 			continue;
 		swipe++;
