@@ -16,6 +16,5 @@ int main() {
 		if (getch() == 27)return 0;
 	}
 	system("PAUSE");
-
 	return 0;
 }

@@ -26,7 +26,7 @@ MoveDirection KeyCheck(char key) {
 
 	if (key == 65 || key == 97 || key == 148 || key == 228 || key == -28 || key == -108 || key == 75)
 		return RightToLeft;
-	if (key == 27 || key == 13)
+	if (key == 27)
 		return Esc;
 	return None;
 }
