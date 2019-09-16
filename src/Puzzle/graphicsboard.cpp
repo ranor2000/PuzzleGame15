@@ -72,7 +72,7 @@ void SalutingWindow() {
 	outtextxy(20, 80, (char*)"A - Move EMPTY cell LEFT");
 	outtextxy(20, 120, (char*)"S - Move EMPTY cell DOWN");
 	outtextxy(20, 160, (char*)"D - Move EMPTY cell RIGHT");
-	outtextxy(20, 200, (char*)"T - Open Leaders-list");
+	//outtextxy(20, 200, (char*)"T - Open Leaders-list");
 	outtextxy(240, 280, (char*)"PRESS");
 	outtextxy(185, 320, (char*)"<ANNY KEY>");
 	outtextxy(170, 360, (char*)"TO CONTINUE");
