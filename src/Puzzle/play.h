@@ -1,14 +1,9 @@
 #pragma once
-#include "graphicsboard.h"
-
 #include "stdafx.h"
 
-
+#include "graphicsboard.h"
 #include "shift.h"
-
 #include "generation.h"
-
-
 
 void ProcessGame(byte** field);
 

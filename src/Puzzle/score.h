@@ -1,5 +1,6 @@
 #pragma once
 #include "stdafx.h"
+#include "play.h"
 
 #define WORK_FILE "player.bin"
 
