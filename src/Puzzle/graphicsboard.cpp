@@ -1,12 +1,13 @@
 #include "graphicsboard.h"
 
 void BoardOutput(byte** field) {
+	cleardevice();
 	int xx, yy;
 	char * fieldonchar = new char[255];
 	for (int i = 0; i < 4; i++)
 		for (int j = 0; j < 4; j++) {
-			bar(j * (getmaxx() / 4) + 10, i * (getmaxy() / 4) + 10, (j + 1) * (getmaxx() / 4) - 10, (i + 1) * (getmaxy() / 4) - 10);
 			if (field[i][j] == EMPTY)continue;
+			bar(j * (getmaxx() / 4) + 10, i * (getmaxy() / 4) + 10, (j + 1) * (getmaxx() / 4) - 10, (i + 1) * (getmaxy() / 4) - 10);
 			if (field[i][j] < 10)
 				xx = 50 + (j) * (getmaxx() / 4);
 			else

@@ -32,12 +32,3 @@ bool VictoryCheck(byte** field, int swipe) {
 	else
 		return false;
 }
-
-void OutputBoard(byte** field) {
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++)
-			printf("[%2d]", field[i][j]);
-		printf("\n");
-	}
-	printf("\n");
-}
