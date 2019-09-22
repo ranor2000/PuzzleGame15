@@ -31,6 +31,26 @@ TEST(GameMechanics, Generation) {
 	ASSERT_EQ(sum, 120);
 }
 
+TEST(GameMechanics, KeyCheck) {
+	char a,b,c,d;
+	for (int i = 0; i < 7; i++) {
+		switch(i) {
+		case 0: a = 87; b = 68; c = 83; d = 65; break;
+		case 1: a = 119; b = 100; c = 115; d = 97; break;
+		case 2: a = 150; b = 130; c = 155; d = 148; break;
+		case 3: a = 230; b = 162; c = 235; d = 228; break;
+		case 4: a = -26; b = -94; c = -21; d = -28; break;
+		case 5: a = -106; b = -126; c = -101; d = -108; break;
+		case 6: a = 72; b = 77; c = 80; d = 75; break;
+		}
+		ASSERT_EQ(KeyCheck(a), DownToUp);
+		ASSERT_EQ(KeyCheck(b), LeftToRight);
+		ASSERT_EQ(KeyCheck(c), UpToDown);
+		ASSERT_EQ(KeyCheck(d), RightToLeft);
+	}
+	ASSERT_EQ(KeyCheck(27), Esc);
+}
+
 TEST(GameMechanics, Victory) {
 	byte** testField = GenerateNewField();
 	
