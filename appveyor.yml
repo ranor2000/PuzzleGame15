@@ -6,8 +6,6 @@ configuration:
 
 - Debug
 
-- Release
-
 platform: x86
 
 before_build:
