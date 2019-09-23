@@ -15,5 +15,3 @@ struct scorelist {
 void loadscore(scorelist* leaders);
 
 void savescore(scorelist* leaders);
-
-void Globalscore(scorelist* leaders);

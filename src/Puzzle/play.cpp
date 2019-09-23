@@ -8,7 +8,7 @@ void ProcessGame(byte** field) {
 
 	// main game cycle
 	while (true) {
-		MoveDirection direction = KeyCheckConslole();
+		MoveDirection direction = KeyCheck(getch());
 
 		if (direction == Escape)
 			return;

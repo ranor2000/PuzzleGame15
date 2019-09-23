@@ -92,3 +92,16 @@ void SalutingWindow() {
 
 	settextstyle(0, 0, 10);
 }
+
+void Globalscore(scorelist* leaders) {
+	int n = 0;
+	cleardevice();
+
+	for (int i = 0; i < 6; i++) {
+		outtextxy(0, n, (leaders + i)->name);
+		outtextxy(445, n, (leaders + i)->n);
+		n += 80;
+	}
+
+	getch();
+}

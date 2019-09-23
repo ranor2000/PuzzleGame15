@@ -9,3 +9,5 @@ void BoardOutput(byte** field);
 void VictoryWindow(int swipe);
 
 void SalutingWindow();
+
+void Globalscore(scorelist* leaders);

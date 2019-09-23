@@ -15,16 +15,3 @@ void loadscore(scorelist* leaders) {
 	fclose(fn);
 }
 
-void Globalscore(scorelist* leaders) {
-	int n = 0;
-	cleardevice();
-
-	for (int i = 0; i < 6; i++) {
-		outtextxy(0, n, (leaders + i)->name);
-		outtextxy(445, n, (leaders + i)->n);
-		n += 80;
-	}
-
-	getch();
-}
-

@@ -14,8 +14,6 @@ enum MoveDirection {
 
 void swap(byte& a, byte& playerName);
 
-MoveDirection KeyCheckConslole();
-
 MoveDirection KeyCheck(char key);
 
 void RectangelMove(MoveDirection direction, byte** field);

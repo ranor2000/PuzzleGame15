@@ -7,12 +7,6 @@ void swap(byte& a, byte& b) {
 	b = temp;
 }
 
-// check from console
-MoveDirection KeyCheckConslole() {
-	char key = getch();
-	return KeyCheck(key);
-}
-
 // check 
 MoveDirection KeyCheck(char key) {
 	if (key == 87 || key == 119 || key == 150 || key == 230 || key == -26 || key == -106 || key == 72)
