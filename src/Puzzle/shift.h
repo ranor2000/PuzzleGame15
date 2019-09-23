@@ -9,10 +9,10 @@ enum MoveDirection {
 	UpToDown = 2,		// S (83, 115, 155, 235)
 	RightToLeft = 3,	// D (65, 97, 148, 228)
 	None = 4,			// no moving
-	Esc = 5				// Escape from process game
+	Escape = 5			// Escape from process game
 };
 
-void swap(byte& a, byte& b);
+void swap(byte& a, byte& playerName);
 
 MoveDirection KeyCheckConslole();
 

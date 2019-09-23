@@ -33,6 +33,7 @@ TEST(GameMechanics, Generation) {
 
 TEST(GameMechanics, KeyCheck) {
 	char a,b,c,d;
+
 	for (int i = 0; i < 7; i++) {
 		switch(i) {
 		case 0: a = 87; b = 68; c = 83; d = 65; break;
@@ -43,12 +44,14 @@ TEST(GameMechanics, KeyCheck) {
 		case 5: a = -106; b = -126; c = -101; d = -108; break;
 		case 6: a = 72; b = 77; c = 80; d = 75; break;
 		}
+
 		ASSERT_EQ(KeyCheck(a), DownToUp);
 		ASSERT_EQ(KeyCheck(b), LeftToRight);
 		ASSERT_EQ(KeyCheck(c), UpToDown);
 		ASSERT_EQ(KeyCheck(d), RightToLeft);
 	}
-	ASSERT_EQ(KeyCheck(27), Esc);
+
+	ASSERT_EQ(KeyCheck(27), Escape);
 }
 
 TEST(GameMechanics, Victory) {

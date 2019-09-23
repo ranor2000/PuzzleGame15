@@ -1,14 +1,21 @@
 #include "play.h"
 
 void ProcessGame(byte** field) {
-	int swipe=0;
+	int swipe = 0;
 	field = GenerateNewField();
+
 	BoardOutput(field);
+
+	// main game cycle
 	while (true) {
 		MoveDirection direction = KeyCheckConslole();
-		if (direction == 5) return;
+
+		if (direction == Escape)
+			return;
+
 		if (direction == None)
 			continue;
+
 		swipe++;
 		RectangelMove(direction, field);
 		if (VictoryCheck(field, swipe)) {
@@ -18,12 +25,15 @@ void ProcessGame(byte** field) {
 
 		BoardOutput(field);
 	}
+
+	// free memory
 	DeleteField(field);
 }
 
 bool VictoryCheck(byte** field, int swipe) {
-	int coinc=0;
-	for (int i = 0; i < 4; i++) 
+	int coinc = 0;
+
+	for (int i = 0; i < 4; i++)
 		for (int j = 0; j < 4; j++)
 			if (field[i][j] == i * 4 + j + 1) coinc++;
 
