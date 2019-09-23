@@ -4,6 +4,7 @@
 #define WORK_FILE "player.bin"
 
 #define WORDSIZE 10
+#define SCORE_LIST_SIZE 6
 
 struct scorelist {
 	int score = 300;
