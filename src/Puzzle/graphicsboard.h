@@ -1,8 +1,10 @@
 #pragma once
 #include "stdafx.h"
 
-#include "play.h"
 #include "score.h"
+#include "play.h"
+
+void GlobalScore(scorelist* leaders);
 
 void BoardOutput(byte** field);
 

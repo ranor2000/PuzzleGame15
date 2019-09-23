@@ -2,7 +2,11 @@ version: '{build}'
 
 image: Visual Studio 2019
 
-configuration: Debug
+configuration:
+
+- Debug
+
+- Release
 
 platform: x86
 
@@ -17,4 +21,5 @@ build:
   verbosity: minimal
 
 test_script:
+
 - cmd: C:\projects\puzzlegame15\src\Debug\Test.exe

@@ -27,12 +27,12 @@ TEST(GameMechanics, Generation) {
 	}
 
 	DeleteField(testField);
-
 	ASSERT_EQ(sum, 120);
 }
 
 TEST(GameMechanics, KeyCheck) {
 	char a,b,c,d;
+
 	for (int i = 0; i < 7; i++) {
 		switch(i) {
 		case 0: a = 87; b = 68; c = 83; d = 65; break;
@@ -43,11 +43,13 @@ TEST(GameMechanics, KeyCheck) {
 		case 5: a = -106; b = -126; c = -101; d = -108; break;
 		case 6: a = 72; b = 77; c = 80; d = 75; break;
 		}
+
 		ASSERT_EQ(KeyCheck(a), DownToUp);
 		ASSERT_EQ(KeyCheck(b), LeftToRight);
 		ASSERT_EQ(KeyCheck(c), UpToDown);
 		ASSERT_EQ(KeyCheck(d), RightToLeft);
 	}
+
 	ASSERT_EQ(KeyCheck(27), Esc);
 }
 
@@ -63,6 +65,30 @@ TEST(GameMechanics, Victory) {
 	testField[3][3] = EMPTY;
 
 	ASSERT_TRUE(VictoryCheck(testField,100));
+}
+
+TEST(GameIO, SaveLoad) {
+	scorelist
+		* tested = new scorelist[SCORE_LIST_SIZE],
+		* control = new scorelist[SCORE_LIST_SIZE];
+	char tmp[WORDSIZE];
+	for (int i = 0; i < SCORE_LIST_SIZE; i++) {
+		_itoa(i*100+i, tmp, 10);
+
+		strcpy(control[i].playerName, tmp);
+		control[i].score = i;
+		strcpy(control[i].textScore, tmp);
+	}
+	savescore(control);
+
+	loadscore(tested);
+
+	for (int i = 0; i < SCORE_LIST_SIZE; i++) {
+		ASSERT_EQ(control[i].score, tested[i].score);
+		ASSERT_FALSE(strcmp(control[i].textScore, tested[i].textScore));
+		ASSERT_FALSE(strcmp(control[i].playerName, tested[i].playerName));
+	}
+
 }
 
 int main(int argc, char** argv) {

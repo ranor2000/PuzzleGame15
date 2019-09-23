@@ -13,6 +13,7 @@ byte** GenerateNewField() {
 	}
 	field[3][3] = EMPTY;
 	srand(time(NULL));
+
 	// shuffle
 	for (int i = 0; i < 1000; i++) {
 		int randshift = rand() % 4;

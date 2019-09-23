@@ -351,7 +351,7 @@ void setrgbpalette( int colornum, int red, int green, int blue );
 #define GREEN_VALUE(v)      int(GetGValue( converttorgb(v) ))
 #define BLUE_VALUE(v)       int(GetBValue( converttorgb(v) ))
 #undef COLOR
-int COLOR(int r, int g, int b); // No longer a macro
+int COLOR(int r, int g, int playerName); // No longer a macro
 
 #ifdef __cplusplus
 };
