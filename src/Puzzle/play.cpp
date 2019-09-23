@@ -10,7 +10,7 @@ void ProcessGame(byte** field) {
 	while (true) {
 		MoveDirection direction = KeyCheck(getch());
 
-		if (direction == Escape)
+		if (direction == Esc)
 			return;
 
 		if (direction == None)

@@ -1,5 +1,19 @@
 #include "graphicsboard.h"
 
+void GlobalScore(scorelist* leaders) {
+	int n = 0;
+	cleardevice();
+
+	for (int i = 0; i < 6; i++) {
+		outtextxy(0, n, (leaders + i)->playerName);
+		outtextxy(445, n, (leaders + i)->textScore);
+		n += 80;
+	}
+
+	getch();
+	return;
+}
+
 void BoardOutput(byte** field) {
 	cleardevice();
 	int x, y;
@@ -52,20 +66,20 @@ void VictoryWindow(int swipe) {
 
 		else if (letter == 13) {
 			for (int j = 0; j < 6; j++) {
-				if (leaders[j].scor > swipe) {
+				if (leaders[j].score > swipe) {
 					for (int k = 5; k > j; k--) {
-						leaders[k].scor = leaders[k - 1].scor;
-						strcpy(leaders[k].n, leaders[k - 1].n);
-						strcpy(leaders[k].name, leaders[k - 1].name);
+						leaders[k].score = leaders[k - 1].score;
+						strcpy(leaders[k].textScore, leaders[k - 1].textScore);
+						strcpy(leaders[k].playerName, leaders[k - 1].playerName);
 					}
-					leaders[j].scor = swipe;
-					strcpy(leaders[j].n, score);
-					strcpy(leaders[j].name, playerName);
+					leaders[j].score = swipe;
+					strcpy(leaders[j].textScore, score);
+					strcpy(leaders[j].playerName, playerName);
 					break;
 				}
 			}
 			savescore(leaders);
-			Globalscore(leaders);
+			GlobalScore(leaders);
 			break;
 		}
 
@@ -91,17 +105,4 @@ void SalutingWindow() {
 	outtextxy(170, 360, (char*)"TO CONTINUE");
 
 	settextstyle(0, 0, 10);
-}
-
-void Globalscore(scorelist* leaders) {
-	int n = 0;
-	cleardevice();
-
-	for (int i = 0; i < 6; i++) {
-		outtextxy(0, n, (leaders + i)->name);
-		outtextxy(445, n, (leaders + i)->n);
-		n += 80;
-	}
-
-	getch();
 }
